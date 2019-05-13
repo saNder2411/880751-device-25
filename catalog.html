@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс: Каталог</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
       <header class="main-header">
-          <a class="main-header-logo">
+          <a class="main-header-logo" href="index.html">
              <img src="img/index-logo.svg" width="163" height="35"
                alt="Логотип Devace">
            </a>
@@ -37,6 +38,16 @@
           </nav>
           <section class="catalog">
               <h2 class="visually-hidden">Список товаров</h2>
+              <header class="catalog-header">
+                  <h3>Сортировка:</h3>
+                  <ul class="sorting-list">
+                      <li class="sorting-item"><a href="#">По цене</a></li>
+                      <li class="sorting-item"><a>По типу</a></li>
+                      <li class="sorting-item"><a>По популярности</a></li>
+                  </ul>
+                  <a class="arrow-up" href="#">по возрастанию</a>
+                  <a class="arrow-down" href="#">по убыванию</a>
+              </header>
               <ul class="catalog-list">
                   <li class="catalog-item">
                       <h3>
@@ -78,11 +89,24 @@
                           </p>
                           <span>4900 руб.</span>
                       </li>
-              </ul>
+                 </ul>
+                 <div class="paginator">
+                     <a class="prev" href="#prev">Назад</a>
+                     <a href="#1">1</a>
+                     <a>2</a>
+                     <a>3</a>
+                     <a class="next" href="#next">Вперёд</a>
+                 </div>
           </section>
 
           <aside class="filter">
-              <form action="#" method="post">
+              <h3>Фильтр:</h3>
+              <form action="#" method="post" oninput="costoutput.value=costcount.value">
+                  <fieldset class="cost">
+                      <legend>Стоимость</legend>
+                      <input type="range" name="costcount" min="0" max="20000" step="1" />
+                      <output name="costoutput"></output>
+                  </fieldset>
                   <feildset class="color-product">
                       <legend>Цвет</legend>
                       <input type="checkbox" name="black" id="black" checked/>

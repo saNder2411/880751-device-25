@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
      <header class="main-header">
@@ -29,18 +30,180 @@
      <main class="container">
          <h1 class="visually-hidden">Интенет-магазин: «DEVACE»</h1>
 
-         <!-- <section class="slider-product">
-             Здесь будет слайдер
-         </section> -->
-        <!-- <nav class="section-menu">
-             Блоки ссылки с названиями разделов
-        </nav> -->
-        <!-- <section class="services">
-            Блок с услугами
-        </section> -->
-        <!-- <section class="product-brends">
-            Блок с галереей брендов
-        </section> -->
+          <section class="slider-product">
+              <!-- Слайдер буду делать на CSS3 с трасформацией -->
+              <h2 class="visually-hidden">Галерея популярных товаров</h2>
+             <div class="slider">
+                 <input type="radio" id="btn-1" name="toggle" checked>
+                 <input type="radio" id="btn-2" name="toggle">
+                 <input type="radio" id="btn-3" name="toggle">
+                 <div class="slider-controls">
+                     <label for="btn-1"></label>
+                     <label for="btn-2"></label>
+                     <label for="btn-3"></label>
+                     <a class="button about-product-btn" href="#">Подробнее</a>
+                 </div>
+                 <div class="slider-inner">
+                     <div class="slider-slides">
+                         <div class="slider-item">
+                             <img src="img/product-slide1.jpg" alt="палка для селфи">
+                             <b>Делай селфи, как Бен Стиллер! </b>
+                             <p>
+                                 Самая длинная палка для селфи доступна в нашем магазине.
+                                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                             </p>
+                             <table class="parameter">
+                                 <tr>
+                                     <td>8,5 м</td>
+                                     <td>5 кг</td>
+                                     <td>Карбон</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Длина палки</td>
+                                     <td>Вес палки</td>
+                                     <td>Материал</td>
+                                 </tr>
+                             </table>
+                         </div>
+                         <div class="slider-item">
+                             <img src="img/product-slide2.jpg" alt="фитнес-браслет">
+                             <b>Худеем правильно!</b>
+                             <p>
+                                 Мотивирующие фитнес-браслеты помогут найти в себе силы
+                                 не пропускать занятия и соблюдать диету.
+                             </p>
+                             <table class="parameter">
+                                 <tr>
+                                     <td>48 часов</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Без подзарядки</td>
+                                 </tr>
+                             </table>
+                         </div>
+                         <div class="slider-item">
+                             <img src="img/product-slide3.jpg" alt="квадрокоптер">
+                             <b>Порхает как бабочка,жалит как пчела!</b>
+                             <p>
+                                 Этот обычный, на первый взгляд, квадрокоптер оснащен
+                                 мощным лазером, замаскированным под стандартную камеру.
+                             </p>
+                             <table class="parameter">
+                                 <tr>
+                                     <td>800 м</td>
+                                     <td>50 м</td>
+                                 </tr>
+                                 <tr>
+                                     <td>Дальность полета</td>
+                                     <td>Радиус поражения</td>
+                                 </tr>
+                             </table>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+         <nav class="catalog-menu">
+            <ul class="catalog-menu-list">
+                 <!-- Фоновое избражение у ссылок будет спрайт  а подписи ссылок
+                  вынесу абсолютным позиционироание(<span>) относительна ссылок -->
+                <li class="catalog-menu-item">
+                    <a href="#"><span>Виртуальная реальность</span></a>
+                </li>
+                <li class="catalog-menu-item">
+                    <a href="#"><span>Моноподы для селфи</span></a>
+                </li>
+                <li class="catalog-menu-item">
+                    <a href="#"><span>Экшн-камеры</span></a>
+                </li>
+                <li class="catalog-menu-item">
+                    <a href="#"><span>Фитнес-браслеты</span></a>
+                </li>
+                <li class="catalog-menu-item">
+                    <a href="#"><span>Умные часы</span></a>
+                </li>
+                <li class="catalog-menu-item">
+                    <a href="#"><span>Квадрокоптеры</span></a>
+                </li>
+            </ul>
+        </nav>
+         <section class="services">
+            <h2 class="visually-hidden">Услуги</h2>
+            <!-- Меню услуг будет с выпадающим подменю -->
+            <ul class="services-list">
+                <li class="services-list-item">Доставка
+                    <ul class="services-about-list">
+                        <li class="services-about-item">
+                            <h3>Доставка</h3>
+                            <p>
+                                Мы с удовольствием доставим ваш товар прямо к
+                                вашему подъезду совершенно бесплатно! Ведь мы
+                                неплохо заработаем, поднимая его на ваш этаж.
+                            </p>
+                            <div class="services-image">
+                               <!-- Фоновое изображение услуг спрайт  -->
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="services-list-item">Гарантия
+                    <ul class="services-about-list">
+                        <li class="services-about-item">
+                            <h3>Гарантия</h3>
+                            <p>
+                                Если из-за возгорания купленного у нас товара у
+                                вас сгорит дом — не переживайте, мы выдадим вам
+                                новый.<br />
+                                Товар, не дом, конечно же.
+                            </p>
+                            <div class="services-image">
+                               <!-- Фоновое изображение услуг спрайт  -->
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="services-list-item">Кредит
+                    <ul class="services-about-list">
+                        <li class="services-about-item">
+                            <h3>Кредит</h3>
+                            <p>
+                                Залезть в долговую яму стало проще! Кредитные
+                                консультанты подберут для вас наиболее выгодные
+                                условия кредита. Выгодные для нашего банка,
+                                разумеется.
+                            </p>
+                            <div class="services-image">
+                               <!-- Фоновое изображение услуг спрайт  -->
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+         <nav class="brends-navigation">
+            <ul class="brends-list">
+                <li class="brends-item">
+                    <a href="#">
+                        <img src="img/brends-1.svg" width="260" height="100" alt="DJI" />
+                    </a>
+                </li>
+                <li class="brends-item">
+                    <a href="#">
+                        <img src="img/brends-1.svg" width="260" height="100" alt="SP" />
+                    </a>
+                </li>
+                <li class="brends-item">
+                    <a href="#">
+                        <img src="img/brends-1.svg" width="260" height="100" alt="GoPro" />
+                    </a>
+                </li>
+                <li class="brends-item">
+                    <a href="#">
+                        <img src="img/brends-1.svg" width="260" height="100" alt="Vive" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <section class="about-us">
             <h2>О нас</h2>
 
@@ -76,7 +239,7 @@
                 </a>
             </p>
 
-            <button class="button feedback-btn" href="#">Напишите нам</button>
+            <button class="button feedback-btn" type="button">Напишите нам</button>
         </section>
      </main>
 
