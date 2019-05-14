@@ -19,7 +19,32 @@
          </ul>
          <nav class="main-navigation" >
             <ul class="site-navigation">
-               <li><a href="catalog.html">Каталог товаров</a></li>
+               <li><a href="catalog.html">Каталог товаров</a>
+                   <ul class="sub-menu-1">
+                       <li>
+                           <a href="#">Виртуальная реальность</a>
+                       </li>
+                       <li>
+                           <a href="#">Моноподы для селфи</a>
+                       </li>
+                       <li>
+                           <a href="#">Экшн-камеры</a>
+                       </li>
+                   </ul>
+                   <ul class="sub-menu-2" >
+                       <li>
+                           <a href="#">Фитнес-браслеты</a>
+                       </li>
+                       <li>
+                           <a href="#">Умные часы</a>
+                       </li>
+                   </ul>
+                   <ul class="sub-menu-3" >
+                       <li>
+                           <a href="#">Квадрокоптеры</a>
+                       </li>
+                   </ul>
+               </li>
                <li><a href="delivery.html">Доставка</a></li>
                <li><a href="guarantee.html">Гарантия</a></li>
                <li><a href="contacts.html">Контакты</a></li>
@@ -31,7 +56,7 @@
          <h1 class="visually-hidden">Интенет-магазин: «DEVACE»</h1>
 
           <section class="slider-product">
-              <!-- Слайдер буду делать на CSS3 с трасформацией -->
+<!-- Слайдер  на CSS3 с трасформацией -->
               <h2 class="visually-hidden">Галерея популярных товаров</h2>
              <div class="slider">
                  <input type="radio" id="btn-1" name="toggle" checked>
@@ -127,13 +152,22 @@
                 </li>
             </ul>
         </nav>
+<!-- Меню услуг таб на CSS3 -->
          <section class="services">
             <h2 class="visually-hidden">Услуги</h2>
-            <!-- Меню услуг будет с выпадающим подменю -->
-            <ul class="services-list">
-                <li class="services-list-item">Доставка
-                    <ul class="services-about-list">
-                        <li class="services-about-item">
+            <div class="services-slider">
+                <input type="radio" id="btn-1" name="button" checked />
+                <input type="radio" id="btn-2" name="button" />
+                <input type="radio" id="btn-3" name="button" />
+                <div class="slider-controls">
+    <!-- Как здесь лучше разметить кнопки: ссылками,баттонами "батонами" ) или спанами?  -->
+                    <label for="btn-1"><span class="btn-contols">Доставка</span></label>
+                    <label for="btn-2"><span class="btn-contols">Гарантия</span></label>
+                    <label for="btn-3"><span class="btn-contols">Кредит</span></label>
+                </div>
+                <div class="slider-inner">
+                    <div class="slider-slides">
+                        <div class="slider-item">
                             <h3>Доставка</h3>
                             <p>
                                 Мы с удовольствием доставим ваш товар прямо к
@@ -143,12 +177,8 @@
                             <div class="services-image">
                                <!-- Фоновое изображение услуг спрайт  -->
                             </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="services-list-item">Гарантия
-                    <ul class="services-about-list">
-                        <li class="services-about-item">
+                        </div>
+                        <div class="slider-item">
                             <h3>Гарантия</h3>
                             <p>
                                 Если из-за возгорания купленного у нас товара у
@@ -159,12 +189,8 @@
                             <div class="services-image">
                                <!-- Фоновое изображение услуг спрайт  -->
                             </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="services-list-item">Кредит
-                    <ul class="services-about-list">
-                        <li class="services-about-item">
+                        </div>
+                        <div class="slider-item">
                             <h3>Кредит</h3>
                             <p>
                                 Залезть в долговую яму стало проще! Кредитные
@@ -175,12 +201,14 @@
                             <div class="services-image">
                                <!-- Фоновое изображение услуг спрайт  -->
                             </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Панель с логотипами брендов -->
         </section>
-         <nav class="brends-navigation">
+         <div class="brends-navigation">
             <ul class="brends-list">
                 <li class="brends-item">
                     <a href="#">
@@ -203,7 +231,9 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </div>
+
+<!-- Раздел "О нас" -->
         <section class="about-us">
             <h2>О нас</h2>
 
@@ -214,16 +244,16 @@
                 <p>
                     Мы можем доставить ваш товар в самые отдаленные точки России!
                     DEVICE работает со многими транспортными компаниями:
+                </p>
                     <ul class="partner-list">
                         <li>Деловые Линии</li>
                         <li>Автотрейдинг</li>
                         <li>ЖелДорЭкспедиция</li>
                     </ul>
-                </p>
                 <a class="button about-us-btn" href="#">Подробнее о нас</a>
-
         </section>
 
+<!-- Раздел "Контакты" -->
         <section class="contacts">
             <h2>Контакты</h2>
 
@@ -243,26 +273,27 @@
         </section>
      </main>
 
+<!-- ФУТЕР -->
      <footer class="main-footer">
-         <nav class="footer-main-navigation">
+
              <!-- Ссылка-логотип на главное меню -->
              <a class="main-footer-logo" href="#main-menu">
                 <img src="img/index-logo.svg" width="163" height="35"
                   alt="Логотип Devace">
               </a>
 
-             <ul class="footer-user-navigation">
+             <ul class="footer-user-menu">
                 <li class="login-link">Вход</li>
                 <li class="compare">Сравнить</li>
                 <li class="basket">Корзина</li>
              </ul>
-
-             <ul class="footer-site-navigation">
+        <div class="footer-services-menu">
+             <ul class="footer-services-list">
                 <li><a href="delivery.html">Доставка</a></li>
                 <li><a href="guarantee.html">Гарантия</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
              </ul>
-        </nav>
+        </div>
         <p class="adress">
             г. Москва, ул. Строителей, 15
         </p>
