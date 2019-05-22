@@ -1,20 +1,26 @@
-/* /@font-face {
-    font-family: "Open Sans";
-    src: url("opensans-regular.ttf");
-    src: local("OpenSans-Regular"), local("OpenSansRegular");
-    src: url("opensans-regular.ttf") format("truetype");
+@font-face {
+    font-family: 'gilroylight';
+    src: local('gilroylight'),
+         url('gilroylight-webfont.woff2') format('woff2'),
+         url(../fonts/'gilroylight-webfont.woff2') format('woff2');
     font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: "Gilroy";
-    src: url("gilroy-regular.ttf");
-    src: local("Gilroy-Regular"), local("GilroyRegular");
-    src: url("gilroy-regular.ttf") format("truetype");
-    font-weight: bold;
-} */
+    font-family: 'gilroyextrabold';
+    src: local('gilroyextrabold'),
+         url('gilroyextrabold-webfont.woff2') format('woff2'),
+         url(../fonts/'gilroyextrabold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
-
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
 
 body {
@@ -43,7 +49,21 @@ body {
     overflow: hidden;
 }
 
-ul {
+.user-menu,
+.site-navigation,
+.container-sub-menu ul,
+.catalog-menu-list,
+.brends-list,
+.partner-list,
+.footer-user-menu,
+.footer-services-list,
+.footer-social,
+.menu-list,
+.color-product-list,
+fieldset ul,
+.sorting-list,
+.catalog-list,
+.paginator {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -213,7 +233,7 @@ a {
     margin-left: 60px;
     /* outline: 1px solid rgba(0, 128, 0, 0.3); */
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
@@ -287,7 +307,7 @@ a {
     flex-wrap: nowrap;
     margin-right:60px;
 
-    font-family: "OpenSans-Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 30px;
     font-weight: normal;
@@ -341,7 +361,7 @@ a {
 }
 
 .inner-title-slider .parameter tr:first-of-type td {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 0.36px;
@@ -406,7 +426,7 @@ a {
 .catalog-menu .catalog-menu-list span {
     text-decoration: none;
     color: #000000;
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.18px;
@@ -456,7 +476,7 @@ a {
 /* Меню услуг таб на CSS3 */
 
 .services-slider-item h3 {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.47px;
@@ -466,7 +486,7 @@ a {
 }
 
 .services-slider-controls {
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 3.6px;
@@ -609,7 +629,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 3.6px;
@@ -675,22 +695,6 @@ svg path {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* MAIN каталога -----------------------------------------*/
 
 
@@ -698,7 +702,7 @@ svg path {
     margin: 0;
     padding: 0;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.47px;
@@ -770,7 +774,7 @@ svg path {
     height: 71px;
     width: 100%;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 71px;
@@ -792,32 +796,31 @@ svg path {
     width: 201px;
     margin-left: 200px;
     border-top: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 50px;
 
 }
 
-.container-form fieldset legend {
-    font-family: "Gilroy";
+.container-form legend {
+    position: absolute;
+    top: 0;
+
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.18px;
     font-weight: bold;
     text-align: left;
 
-    margin-top: 16px;
-}
-
-.container-form fieldset {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .cost  {
-    height: 138px;
+    height: 88px;
+
+    border-top: 2px solid #000000;
 }
 
 .cost::before {
@@ -827,7 +830,7 @@ svg path {
     width: 20px;
     height: 22px;
     background-image: url(../img/filter-button.svg);
-    top: 69px;
+    top: 49px;
     z-index: 1;
 }
 
@@ -838,17 +841,17 @@ svg path {
     width: 20px;
     height: 22px;
     background-image: url(../img/filter-button.svg);
-    top: 69px;
+    top: 49px;
     left: 108px;
     z-index: 1;
 }
 
 .cost output {
     position: absolute;
-    top: 58px;
+    top: 78px;
 
     color: rgba(0, 0, 0, 0.2);
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 14px;
     line-height: 24px;
 }
@@ -856,18 +859,18 @@ svg path {
     left: 89px;
 }
 
-.cost fieldset::after {
+.cost legend::after {
     content: "";
     display: block;
     position: absolute;
     width: 110px;
     height: 2px;
     background-color: #91c92f;
-    top: 38px;
+    top: 58px;
     left: 10px;
 }
 
-.container-form fieldset ul {
+.container-form  ul {
     position: relative;
     padding: 0;
     margin: 0;
@@ -876,14 +879,14 @@ svg path {
     align-items: flex-start;
 }
 
-.container-form fieldset ul li {
+.container-form  ul li {
     padding: 0;
     margin: 0;
 }
 
 
 .color-product label {
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 40px;
     letter-spacing: 0.14px;
@@ -932,10 +935,7 @@ svg path {
     display: block;
 }
 
-.color-product legend {
-    margin-top: 16px;
-    margin-bottom: 28px;
-}
+
 
 .color-product li {
     margin-bottom: 17px;
@@ -945,10 +945,7 @@ svg path {
     margin-bottom: 42px;
 }
 
-.radio-bluetooth legend {
-    margin-top: 16px;
-    margin-bottom: 38px;
-}
+
 
 .radio-bluetooth label {
     margin-left: 39px;
@@ -1000,16 +997,7 @@ svg path {
    margin-top: 60px;
 }
 
-
-
-
-
-
-
-
-
-
-section.catalog {
+.catalog {
     padding: 0;
     margin: 0;
     width:972px;
@@ -1032,7 +1020,7 @@ section.catalog {
     margin: 0;
     margin-left: 74px;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     font-weight: bold;
     line-height: 71px;
@@ -1129,7 +1117,7 @@ section.catalog {
 
     background-color: #ebebeb;
 
-    font-family: "Gilroy";
+    font-family: "Gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 3.2px;
@@ -1139,22 +1127,19 @@ section.catalog {
 }
 
 .paginator .prev {
+    display: block;
     width: 136px;
     height: 70px;
 
+    font: inherit;
     text-align: center;
     vertical-align: middle;
     line-height: 70px;
-
-    border: none;
-    outline: none;
-    box-shadow: none;
-    text-shadow: none;
-
-    font: inherit;
+    text-transform: uppercase;
 }
 
-.paginator .prev:hover {
+.paginator .prev:hover,
+.paginator .prev:focus {
     background-color: #d9d9d9;
 }
 
@@ -1165,24 +1150,19 @@ section.catalog {
 }
 
 .paginator .next {
-    margin-left: 201px;
-
+    display: block;
     width: 136px;
     height: 70px;
 
+    font: inherit;
     text-align: center;
     vertical-align: middle;
     line-height: 70px;
-
-    border: none;
-    outline: none;
-    box-shadow: none;
-    text-shadow: none;
-
-    font: inherit;
+    text-transform: uppercase;
 }
 
-.paginator .next:hover {
+.paginator .next:hover,
+.paginator .next:focus {
     background-color: #d9d9d9;
 }
 
@@ -1191,16 +1171,22 @@ section.catalog {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.paginator a:nth-of-type(1) {
-    margin-left: 201px;
+.paginator  li:first-child {
+    margin-right: 201px;
 }
 
-.paginator a:nth-of-type(2) {
-    margin-left: 31px;
-    filter: opacity(0.3);
+.paginator li:nth-of-type(2) {
+    margin-right: 31px;
 }
 
-.paginator a:nth-of-type(3) {
-    margin-left: 31px;
-    filter: opacity(0.3);
+.paginator li:nth-of-type(3) {
+    margin-right: 31px;
+}
+
+.paginator  li:nth-of-type(4) {
+    margin-right: 190px;
+}
+
+.paginator li:not(:first-child ):not(:nth-child(2)):not(:last-child) a {
+   filter: opacity(0.3);
 }
