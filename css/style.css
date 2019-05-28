@@ -24,7 +24,7 @@ body {
 
 
 body {
-    width: 1440px;
+    min-width: 1440px;
     margin: 40px auto;
 
     font-family: "Open Sans", "Arial", sans-serif;
@@ -381,7 +381,7 @@ input[id="search-in-site"]:focus ~ .search-btn {
     margin-right: 76px;
 }
 
-.site-navigation ul[class^="sub"] li {
+ ul[class^="sub"] li {
     margin-bottom: 5px;
 }
 
@@ -619,26 +619,29 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .catalog-menu-list {
-    list-style: none;
     padding: 0;
     margin: 0;
 
     display: flex;
     justify-content: space-between;
-    width: 1160px;
+    flex-wrap: wrap;
+    max-width: 1160px;
     margin: 0 auto;
 }
 
 .catalog-menu-item {
-    display: flex;
-    flex-basis: 160px;
-    height: 160px;
+    /* display: flex; */
+    /* flex-basis: 160px;
+    height: 158px; */
 }
 
 .catalog-menu-item a {
-    flex-basis: 160px;
-    height: 160px;
     position: relative;
+    display: block;
+    width: 160px;
+    height: 160px;
+
+
 
     background-color: rgba(240, 197, 46, 0.5);
 }
@@ -670,13 +673,13 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     font-weight: bold;
 
     position: absolute;
-    top: 199px;
+    top: 189px;
 }
 
 .catalog-menu-item:first-of-type a {
     background-image: url(../img/popular-1.svg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
 }
 
 .catalog-menu-item:nth-of-type(2) a {
@@ -688,25 +691,25 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 .catalog-menu-item:nth-of-type(3) a {
     background-image: url(../img/popular-3.svg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
 }
 
 .catalog-menu-item:nth-of-type(4) a {
     background-image: url(../img/popular-4.svg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
 }
 
 .catalog-menu-item:nth-of-type(5) a {
     background-image: url(../img/popular-5.svg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
 }
 
 .catalog-menu-item:nth-of-type(6) a {
     background-image: url(../img/poppular-6.svg);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
 }
 
 /* Меню услуг таб на CSS3 ====================================================*/
@@ -767,6 +770,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     align-items: flex-start;
     flex-basis: 277px;
     margin-left: 140px;
+    margin-bottom: 67px;
     height: 319px;
     box-sizing: border-box;
     border-right: 7px solid #000000;
@@ -1882,7 +1886,7 @@ input[type="radio"]:disabled ~ label {
     padding: 0;
 }
 
-.catalog-item a:hover img {
+.catalog-link-img:hover img {
     filter: opacity(0.7);
 }
 
