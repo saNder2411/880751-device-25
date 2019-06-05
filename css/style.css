@@ -318,13 +318,34 @@ input[id="search-in-site"]:focus ~ .search-btn {
     content: "";
     display: block;
     position: absolute;
-    width: 30px;
+
+    width: 16px;
+    height: 2px;
+    top: 11px;
+    right: 4px;
+
+    background-color: #000000;
+    /* width: 30px;
     height: 60px;
     background-image: url(../img/plus.svg);
     background-repeat: no-repeat;
     background-position: 12px top;
     top: 4px;
-    right: 2px;
+    right: 2px; */
+    filter: opacity(0.3);
+}
+
+.site-navigation > li:first-child::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 2px;
+    height: 16px;
+    top: 4px;
+    right: 11px;
+
+    background-color: #000000;
     filter: opacity(0.3);
 }
 
@@ -775,6 +796,12 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     transform: translateY(-638px);
 }
 
+.services {
+    width: 100%;
+    /* width: 1440px; */
+    background-image:
+        linear-gradient(transparent 100px, #e5e5e5 100px);
+}
 
 .services-slider {
     width: 1440px;
@@ -1096,7 +1123,8 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
 
 .main-footer {
-    width: 1440px;
+    width: 100%;
+    /* width: 1440px; */
     margin: 0 auto;
     min-height: 323px;
 
@@ -1336,7 +1364,6 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
 /* Попапы картра и форма ------------------------- */
 
-
 .feedback-form {
     position: relative;
 
@@ -1361,27 +1388,27 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 }
 .user-name-field {
     margin-left: 100px;
-    margin-top: 89px;
+    margin-top: 90px;
 }
 
 .user-email-field {
     margin-right: 100px;
-    margin-top: 89px;
+    margin-top: 90px;
 }
 
 .feedback-form .textarea-field {
     width:760px;
     margin: 0 100px;
-    margin-top: 14px;
+    margin-top: 15px;
 
 }
 
 .feedback-form .button {
     width: 200px;
     background: none;
-    margin-top: 50px;
+    margin-top: 48px;
     margin-left: 100px;
-    margin-bottom: 85px;
+    margin-bottom: 87px;
 }
 
 .feedback-form .button::after {
@@ -1393,8 +1420,9 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 .feedback-form input {
     background-color: rgba(229, 229, 229, 0.5);
     border: none;
-    height: 50px;
+    height: 46px;
     padding-left: 20px;
+    padding-bottom: 3px;
     color: rgba(70, 70, 70, 0.4);
 }
 
@@ -1412,12 +1440,12 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     height: 156px;
     box-sizing: border-box;
     padding-left: 20px;
-    padding-top: 31px;
+    padding-top: 14px;
     color: rgba(70, 70, 70, 0.4);
 
 }
 
-.feedback-form .modal-close {
+.modal .modal-close {
     position: absolute;
     top: 22px;
     right: 22px;
@@ -1425,8 +1453,29 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     border: none;
     width: 55px;
     height: 55px;
-    background-image: url(../img/modal-close.svg);
+    background-color: #f0c52e;
+    border-radius: 50%;
+    /* background-image: url(../img/modal-close.svg); */
     filter: opacity(0.5);
+}
+
+.modal .modal-close::after,
+.modal .modal-close::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 29px;
+    height: 2px;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -1px;
+    transform: rotate(44deg);
+}
+
+.modal .modal-close::before {
+    transform: rotate(-44deg);
 }
 
 .feedback-form input:hover,
@@ -1446,20 +1495,32 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     border: none;
 }
 
-
+.modal-feedback {
+    position: fixed;
+    z-index: 100;
+    top: 120px;
+    left: 50%;
+    margin-left: -480px;
+    display: none;
+}
 
 /* Карта ================================================ */
 
-.modal-map {
-    position: relative;
+.modal.modal-map {
+    position: fixed;
+    top: 920px;
+    left: 50%;
+    margin-left: -480px;
+    display: none;
+
+    z-index: 100;
     width: 960px;
-    margin: 262px auto;
     box-shadow:
         -5px 10px 20px 0px rgba(0, 0, 0, 0.1),
          5px 10px 20px 0px rgba(0, 0, 0, 0.1)
 }
 
-.modal-map .modal-close {
+/* .modal-map .modal-close {
     position: absolute;
     top: 22px;
     right: 22px;
@@ -1469,7 +1530,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     height: 55px;
     background-image: url(../img/modal-close.svg);
     filter: opacity(0.5);
-}
+} */
 
 .modal-map p {
     margin: 0;
@@ -1489,10 +1550,10 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
 /* MAIN каталога -----------------------------------------*/
 
-
-.container-catalog {
+.catalog-menu-wrapper {
     width: 1440px;
     margin: 0 auto;
+
 }
 
 .container-catalog h2 {
@@ -1576,28 +1637,25 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
 
 
-
-
 .container-catalog-filter {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    width: 1440px;
-
+    justify-content: center;
+    min-width: 1440px;
 }
 
 .filter {
     margin: 0;
     width: 468px;
+    flex-grow: 1;
 
     display:flex;
     flex-direction: column;
     align-items: flex-start;
 
     background-color: #ebebeb;
-
 }
 
 .filter h3 {
@@ -1606,7 +1664,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     box-sizing: border-box;
     height: 70px;
     width: 100%;
-    padding-left: 200px;
+    padding-right: 180px;
     padding-top: 22px;
 
     background-color: #d9d9d9;
@@ -1617,13 +1675,16 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     line-height: 24px;
     letter-spacing: 3.65px;
     color: #000000;
-    text-align: left;
+    text-align: right;
     text-transform: uppercase;
     vertical-align: middle;
 }
 
 .filter-form {
+    margin: 0;
     margin-top: 69px;
+    width: 468px;
+    margin-left: auto;
 }
 
 .container-form {
@@ -1650,37 +1711,47 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     font-weight: normal;
     text-align: left;
     color: #000000;
-
 }
 
 .cost  {
     min-height: 138px;
-
     border-top: 2px solid #000000;
 }
 
 .cost::before {
     content: "";
-    display: block;
     position: absolute;
-    width: 20px;
-    height: 22px;
-    background-image: url(../img/filter-button.svg);
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+    border: 8px solid #ffffff;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+
     top: 59px;
     left: -5px;
     z-index: 1;
+    cursor: pointer;
+    /* background-image: url(../img/filter-button.svg); */
 }
 
 .cost::after {
     content: "";
-    display: block;
     position: absolute;
-    width: 20px;
-    height: 22px;
-    background-image: url(../img/filter-button.svg);
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+    border: 8px solid #ffffff;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+
     top: 59px;
     left: 108px;
     z-index: 1;
+    cursor: pointer;
+    /* background-image: url(../img/filter-button.svg); */
 }
 
 .cost output {
@@ -1692,6 +1763,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     font-size: 14px;
     line-height: 24px;
 }
+
 .cost output:last-of-type {
     left: 90px;
 }
@@ -1728,34 +1800,50 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
     margin-left: 39px;
     position: relative;
-
 }
 
 .color-product label::before {
     content: "";
-    display: block;
-    width: 23px;
-    height: 23px;
     position: absolute;
-    background-image: url(../img/checkbox-off.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    display: block;
+    width: 19px;
+    height: 19px;
     left: -40px;
     top: -2px;
+
+    border: 2.5px solid #000000;
+    border-radius: 15%;
+
+    /* background-image: url(../img/checkbox-off.svg);
+    background-position: center;
+    background-repeat: no-repeat; */
 }
 
- .color-product label::after{
+ .color-product label::after {
     content: "";
-    display: block;
-    width: 27px;
-    height: 23px;
     position: absolute;
-    background-image: url(../img/checkbox-on.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    left: -40px;
-    top: -2px;
+    display: block;
+    width: 16px;
+    height: 7px;
+    top: 0;
+    left: -34px;
+
+    border-left: 4.5px solid #000000;
+    border-bottom: 4.5px solid #000000;
+    border-right: 0px solid black ;
+    box-shadow: 0 2px 0 0 #ebebeb,
+          inset 0 -2px 0 0 #ebebeb;
+
+    transform: rotate(-45deg);
+
+
     z-index: 10;
+
+    /* background-image: url(../img/checkbox-on.svg);
+    background-position: center;
+    background-repeat: no-repeat; */
+
+
 }
 
  .color-product label::after {
@@ -1786,13 +1874,13 @@ input[name^="pin"]:checked ~ label[for^="pin"]::after {
     display: block;
 }
 
-input[name^="bla"]:checked ~ label[for^="bla"]::before,
+/* input[name^="bla"]:checked ~ label[for^="bla"]::before,
 input[name^="whi"]:checked ~ label[for^="whi"]::before,
 input[name^="blu"]:checked ~ label[for^="blu"]::before,
 input[name^="red"]:checked ~ label[for^="red"]::before,
 input[name^="pin"]:checked ~ label[for^="pin"]::before {
     display: none;
-}
+} */
 
 
 
@@ -1817,35 +1905,47 @@ input[name^="pin"]:checked ~ label[for^="pin"]::before {
     font-weight: 300;
     text-align: left;
     color: black;
-
 }
+
 .radio-bluetooth li {
     margin-bottom: 11px;
 }
+
 .radio-bluetooth label::before {
     content: "";
-    display: block;
-    width: 25px;
-    height: 25px;
     position: absolute;
-    background-image: url(../img/radio-off.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+    display: block;
+    width: 17px;
+    height: 17px;
     left: -40px;
-    top: -4px;
+    top: -2px;
+    border: 4px solid #000000;
+    border-radius: 50%;
+
+
+
+    /* background-image: url(../img/radio-off.svg);
+    background-position: center;
+    background-repeat: no-repeat; */
+
 }
 
 .radio-bluetooth label::after {
     content: "";
-    display: block;
-    width: 25px;
-    height: 25px;
     position: absolute;
-    background-image: url(../img/radio-on.svg);
+    display: block;
+    width: 9px;
+    height: 9px;
+    left: -32px;
+    top: 6px;
+
+    border-radius: 50%;
+    background-color: #000000;
+
+    /* background-image: url(../img/radio-on.svg);
     background-position: center;
-    background-repeat: no-repeat;
-    left: -40px;
-    top: -4px;
+    background-repeat: no-repeat; */
+
 }
 
 .radio-bluetooth label::after {
@@ -1868,18 +1968,17 @@ input[type="radio"]:disabled ~ label {
     filter: opacity(0.25);
 }
 
-
 .radio-bluetooth input[id="yes"]:checked ~ label[for="yes"]::after,
 .radio-bluetooth input[id="no"]:checked ~ label[for="no"]::after
  {
     display: block;
 }
 
-.radio-bluetooth input[id="yes"]:checked ~ label[for="yes"]::before,
+/* .radio-bluetooth input[id="yes"]:checked ~ label[for="yes"]::before,
 .radio-bluetooth input[id="no"]:checked ~ label[for="no"]::before
  {
     display: none;
-}
+} */
 
 .filter-form .filter-btn {
    margin-left: 232px;
@@ -1899,6 +1998,7 @@ input[type="radio"]:disabled ~ label {
     padding: 0;
     margin: 0;
     width:972px;
+    flex-grow: 1;
     display:flex;
     flex-direction: column;
 }
@@ -1968,26 +2068,36 @@ input[type="radio"]:disabled ~ label {
 }
 
 .catalog-header a[class^="arrow"] {
-    font-size: 0;
-    width: 11px;
-    height: 10px;
+    width: 0px;
+    height: 0px;
 }
 
 .arrow-up {
     margin-left: 230px;
 
-    background-image: url(../img/icon-up-dir.svg);
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 0;
+    border-bottom: 10px solid #000000;
+
+    /* background-image: url(../img/icon-up-dir.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     filter: opacity(0.2);
 }
 
 .arrow-down {
-    margin-left: 19px;
+    margin-left: 18px;
 
-    background-image: url(../img/icon-down-dir.svg);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 0;
+    border-top: 10px solid #000000;
+
+    /* background-image: url(../img/icon-down-dir.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 }
 
 .catalog-header a[class^="arrow"]:hover,
