@@ -111,6 +111,12 @@ body {
     top: -17px;
     left: 0;
 }
+
+.main-header-logo img {
+    width: 164px;
+    height: 35px;
+}
+
 .main-header .user-menu {
     margin-top: 42px;
     margin-bottom: 38px;
@@ -525,6 +531,8 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-top: 1px;
     margin-left: 75px;
     margin-right: 122px;
+    width: 384px;
+    height:486px;
 }
 .slider-item .inner-title-slider {
     margin-top: 78px;
@@ -609,6 +617,8 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-left: 103px;
     margin-right: 136px;
     margin-top: 9px;
+    width: 345px;
+    height:485px;
 }
 
 .inner-title-slider .slogan-slider-2 {
@@ -637,6 +647,8 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-left: 13px;
     margin-right: 42px;
     margin-top: 65px;
+    width: 526px;
+    height:334px;
 }
 
 .inner-title-slider .slogan-slider-3 {
@@ -751,7 +763,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .catalog-menu-item:nth-of-type(6) a {
-    background-image: url(../img/poppular-6.svg);
+    background-image: url(../img/popular-6.svg);
     background-repeat: no-repeat;
     background-position: 13px 49px;
 }
@@ -933,7 +945,8 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     margin: 0 auto;
 }
 
-.brends-item {
+.brends-item,
+.brensd-item img  {
     width: 260px;
     height: 100px;
 }
@@ -1051,9 +1064,11 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     margin-bottom: 38px;
 }
 
-.map img{
+.link-map img{
     margin-left: 3px;
     padding-top: 1px;
+    width: 560px;
+    height:222px;
 }
 
 
@@ -1368,7 +1383,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     position: relative;
 
     width: 960px;
-    margin: 100px auto;
+    margin: 0 auto;
     box-shadow:
         -5px 10px 20px 0px rgba(0, 0, 0, 0.1),
          5px 10px 20px 0px rgba(0, 0, 0, 0.1);
@@ -1457,6 +1472,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     border-radius: 50%;
     /* background-image: url(../img/modal-close.svg); */
     filter: opacity(0.5);
+    z-index: 3;
 }
 
 .modal .modal-close::after,
@@ -1497,19 +1513,22 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
 .modal-feedback {
     position: fixed;
-    z-index: 100;
-    top: 120px;
+    z-index: 150;
+    top: 50%;
     left: 50%;
+    margin-top: -275px;
     margin-left: -480px;
     display: none;
 }
 
+
 /* Карта ================================================ */
 
-.modal.modal-map {
+.modal-map {
     position: fixed;
-    top: 920px;
+    top: 50%;
     left: 50%;
+    margin-top: -280px;
     margin-left: -480px;
     display: none;
 
@@ -1531,9 +1550,17 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     background-image: url(../img/modal-close.svg);
     filter: opacity(0.5);
 } */
-
+.modal-map iframe {
+    position: absolute;
+    z-index: 2;
+}
 .modal-map p {
     margin: 0;
+    height: 559px;
+}
+
+.modal-map img {
+    width: 960px;
     height: 559px;
 }
 
@@ -1546,6 +1573,43 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     filter: opacity(0.3);
 }
 
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    70% {
+        transform: translateY(40px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modal-show {
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-error {
+    animation-name: shake;
+    animation-duration: 0.5s;
+}
 
 
 /* MAIN каталога -----------------------------------------*/
@@ -2126,6 +2190,10 @@ input[type="radio"]:disabled ~ label {
     margin-top: 46px;
 }
 
+.catalog-link-img img {
+    width: 360px;
+    height:380px;
+}
 
 .catalog-item h3 {
     margin: 0;
