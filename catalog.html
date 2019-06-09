@@ -16,7 +16,7 @@
                </a>
               <ul class="user-menu">
                   <li class="search">
-                      <form class="search-form" action="" method="get">
+                      <form class="search-form" action="#" method="get">
                           <label for="search-in-site" aria-label="Поиск по сайту"></label>
                           <input type="search" name="search-in-site"
                                  id="search-in-site" placeholder="Поиск по сайту" />
@@ -31,7 +31,8 @@
               <nav class="main-navigation" aria-label="Навигация по сайту">
                  <ul class="site-navigation">
                     <li class="drop-down-menu"><a href="catalog.html">Каталог товаров</a>
-                        <div class="container-sub-menu"  aria-label="Навигация по товарам">
+                        <div class="container-sub-menu">
+                            <h2 class="visually-hidden">Навигация по товарам</h2>
                             <ul class="sub-menu-1">
                                 <li>
                                     <a href="#">Виртуальная реальность</a>
@@ -82,9 +83,7 @@
                <section class="filter">
                    <h3>Фильтр:</h3>
                    <form class="filter-form" action="#" method="get"
-                            oninput="costoutput-1.value=costcount-1.value"
-                            oninput="costoutput-2.value=costcount-2.value">
-
+                        oninput="costoutput-1.value=costcount-1.value costoutput-2.value=costcount-2.value">
                           <fieldset class="container-form cost">
                                    <legend>Стоимость</legend>
                                    <input class="visually-hidden" type="range" name="costcount-1" min="0"

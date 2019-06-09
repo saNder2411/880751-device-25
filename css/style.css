@@ -169,7 +169,9 @@ body {
 .search-form input[type="search"] {
     width: 115px;
     min-height: 30px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 
     border: none;
     background: none;
@@ -215,7 +217,7 @@ body {
     right: -292px;
     width: 85px;
     height: 49px;
-    border-radius: none;
+    border-radius: 0;
     border: none;
     border: 2px solid #000000;
     background-color: transparent;
@@ -361,7 +363,9 @@ input[id="search-in-site"]:focus ~ .search-btn {
     left: -60px;
     width: 1160px;
     min-height: 140px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 60px;
 
     display: flex;
@@ -425,6 +429,8 @@ input[id="search-in-site"]:focus ~ .search-btn {
     margin-right: 22px;
     background-color: #ffffff;
 
+    cursor: pointer;
+
 }
 
 .slider-controls .button {
@@ -455,10 +461,10 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 .slider {
     position: relative;
 
-     width: 1160px;
-     margin: 0 auto;
-     background-image:
-        linear-gradient(#f7e296 112px, transparent 112px);
+    width: 1160px;
+    margin: 0 auto;
+    background-image:
+    linear-gradient(#f7e296 112px, transparent 112px);
 }
 
 .slider-inner {
@@ -523,7 +529,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     color: #464646;
 
 }
-
 
 /* Первый слайд ====================================================*/
 
@@ -652,7 +657,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .inner-title-slider .slogan-slider-3 {
-    width: 505px;
+    width: 520px;
     margin-bottom: 21px;
     padding-left: 3px;
     z-index: 5;
@@ -812,7 +817,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     width: 100%;
     /* width: 1440px; */
     background-image:
-        linear-gradient(transparent 100px, #e5e5e5 100px);
+    linear-gradient(transparent 100px, #e5e5e5 100px);
 }
 
 .services-slider {
@@ -822,27 +827,27 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     margin-top: 162px;
     margin-bottom: 94px;
     background-image:
-        linear-gradient(transparent 100px, #e5e5e5 100px);
+    linear-gradient(transparent 100px, #e5e5e5 100px);
     z-index: -10;
 }
 
 .services-slider-controls {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     flex-basis: 284px;
+
     margin-left: 140px;
     margin-bottom: 69px;
-    height: 319px;
-    box-sizing: border-box;
+    min-height: 319px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     border-right: 7px solid #000000;
 }
 
 .services-slider-inner {
     height: 319px;
     overflow: hidden;
-
 }
 
 .services-slider-slides {
@@ -866,6 +871,8 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
 .services-slider-controls .button {
     width: 160px;
+    margin-bottom: 40px;
+    cursor: pointer;
 }
 
 .services-slider-controls .button::after {
@@ -985,6 +992,8 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     text-align: center;
     color: #000000;
     z-index: 100;
+
+    cursor: pointer;
 }
 
 .button::after {
@@ -1269,7 +1278,6 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 }
 
 .adress {
-    marigin: 0;
     padding: 0;
     flex-basis: 350px;
     margin-left: -1px;
@@ -1453,7 +1461,9 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     background-color: rgba(229, 229, 229, 0.5);
     border: none;
     height: 156px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 20px;
     padding-top: 14px;
     color: rgba(70, 70, 70, 0.4);
@@ -1553,6 +1563,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 .modal-map iframe {
     position: absolute;
     z-index: 2;
+    border: none;
 }
 .modal-map p {
     margin: 0;
@@ -1725,7 +1736,9 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 .filter h3 {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     height: 70px;
     width: 100%;
     padding-right: 180px;
@@ -1864,6 +1877,7 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
 
     margin-left: 39px;
     position: relative;
+    cursor: pointer;
 }
 
 .color-product label::before {
@@ -1906,8 +1920,6 @@ input[id="services-btn-3"]:checked ~ .services-slider-inner .services-slider-sli
     /* background-image: url(../img/checkbox-on.svg);
     background-position: center;
     background-repeat: no-repeat; */
-
-
 }
 
  .color-product label::after {
@@ -1969,6 +1981,8 @@ input[name^="pin"]:checked ~ label[for^="pin"]::before {
     font-weight: 300;
     text-align: left;
     color: black;
+
+    cursor: pointer;
 }
 
 .radio-bluetooth li {
@@ -2047,6 +2061,7 @@ input[type="radio"]:disabled ~ label {
 .filter-form .filter-btn {
    margin-left: 232px;
    margin-top: 33px;
+   cursor: pointer;
 }
 
 .filter-form .filter-btn::after{
@@ -2246,7 +2261,9 @@ input[type="radio"]:disabled ~ label {
     display: block;
     width: 60px;
     height: 60px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 
     padding-top: 16px;
     padding-left: 4px;
@@ -2303,6 +2320,7 @@ input[type="radio"]:disabled ~ label {
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
     z-index: 100;
+    cursor: pointer;
 
     display: none;
 }
@@ -2356,7 +2374,9 @@ input[type="radio"]:disabled ~ label {
     display: block;
     width: 136px;
     height: 70px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     padding-right: 7px;
 
     font: inherit;
@@ -2370,7 +2390,9 @@ input[type="radio"]:disabled ~ label {
     display: block;
     width: 136px;
     height: 70px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     padding-left: 30px;
 
     font: inherit;
