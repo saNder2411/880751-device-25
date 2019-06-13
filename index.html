@@ -10,7 +10,7 @@
   <body>
       <header class="main-header">
           <div class="header-wrapper">
-              <a class="main-header-logo" href="index.html">
+              <a class="main-header-logo">
                  <img src="img/device-logo-index.svg" width="164" height="35"
                    alt="Логотип Devace">
                </a>
@@ -32,7 +32,6 @@
                  <ul class="site-navigation">
                     <li class="drop-down-menu"><a href="catalog.html">Каталог товаров</a>
                         <div class="container-sub-menu">
-                             <h2 class="visually-hidden">Навигация по товарам</h2>
                             <ul class="sub-menu-1">
                                 <li>
                                     <a href="#">Виртуальная реальность</a>
@@ -176,17 +175,19 @@
          <section class="services">
             <h2 class="visually-hidden">Услуги</h2>
             <div class="services-slider">
-                <input type="radio" id="services-btn-1" name="button" checked />
+                <!-- <input type="radio" id="services-btn-1" name="button" checked />
                 <input type="radio" id="services-btn-2" name="button" />
-                <input type="radio" id="services-btn-3" name="button" />
+                <input type="radio" id="services-btn-3" name="button" /> -->
                 <div class="services-slider-controls">
-                    <label class="button btn-contols" for="services-btn-1" tabindex="0">Доставка</label>
-                    <label class="button btn-contols" for="services-btn-2" tabindex="0">Гарантия</label>
-                    <label class="button btn-contols" for="services-btn-3" tabindex="0">Кредит</label>
+                    <!-- <label class="button btn-contols service-btn-1" for="services-btn-1" tabindex="0">Доставка</label>
+                    <label class="button btn-contols service-btn-2" for="services-btn-2" tabindex="0">Гарантия</label>
+                    <label class="button btn-contols service-btn-3" for="services-btn-3" tabindex="0">Кредит</label> -->
+                    <button class="button btn-contols service-btn-1" type="button" tabindex="0">Доставка</button>
+                    <button class="button btn-contols service-btn-2" type="button" tabindex="0">Гарантия</button>
+                    <button class="button btn-contols service-btn-3" type="button" tabindex="0">Кредит</button>
                 </div>
-                <div class="services-slider-inner">
                     <div class="services-slider-slides">
-                        <div class="services-slider-item">
+                        <div class="services-slider-item services-slider-item-1">
                             <h3>Доставка</h3>
                             <p>
                                 Мы с удовольствием доставим ваш товар прямо к
@@ -197,7 +198,7 @@
                                <!-- Фоновое изображение услуг спрайт  -->
                             </div>
                         </div>
-                        <div class="services-slider-item">
+                        <div class="services-slider-item services-slider-item-2">
                             <h3>Гарантия</h3>
                             <p>
                                 Если из-за возгорания купленного у нас товара у
@@ -209,7 +210,7 @@
                                <!-- Фоновое изображение услуг спрайт  -->
                             </div>
                         </div>
-                        <div class="services-slider-item">
+                        <div class="services-slider-item services-slider-item-3">
                             <h3>Кредит</h3>
                             <p>
                                 Залезть в долговую яму стало проще! Кредитные
@@ -222,30 +223,31 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
             </div>
          </section>
+         <script src="js/slider-service.js"></script>
 
          <section class="brends-panel">
             <h2 class="visually-hidden">Панель брендов</h2>
             <ul class="brends-list">
                 <li class="brends-item">
-                    <a href="#" aria-label="Ссылка на роизводителя DJI">
+                    <a href="#" aria-label="Ссылка на производителя DJI">
                         <img src="img/logo-1-jpg.png" width="260" height="100" alt="DJI" />
                     </a>
                 </li>
                 <li class="brends-item">
-                    <a href="#" aria-label="Ссылка на роизводителя SP">
+                    <a href="#" aria-label="Ссылка на производителя SP">
                         <img src="img/logo-2-jpg.png" width="260" height="100" alt="SP" />
                     </a>
                 </li>
                 <li class="brends-item">
-                    <a href="#" aria-label="Ссылка на роизводителя GoPro">
+                    <a href="#" aria-label="Ссылка на производителя GoPro">
                         <img src="img/logo-3-jpg.png" width="260" height="100" alt="GoPro" />
                     </a>
                 </li>
                 <li class="brends-item">
-                    <a href="#" aria-label="Ссылка на роизводителя Vive">
+                    <a href="#" aria-label="Ссылка на производителя Vive">
                         <img src="img/logo-4-jpg.png" width="260" height="100" alt="Vive" />
                     </a>
                 </li>
@@ -299,11 +301,6 @@
              <a class="main-footer-logo" href="index.html">
                  <svg xmlns="http://www.w3.org/2000/svg" width="163" height="35"
                       viewBox="0 0 163 35" aria-label="Ссылка-логотип на главную страницу">
-                     <defs>
-                         <style>
-                             .cls-1{fill-rule:evenodd}
-                         </style>
-                     </defs>
                      <path id="_-e-logo" d="M-.151.702v33.6h13.532a15.72 15.72 0 0 0
                      11.72-4.824 16.458 16.458 0 0 0 4.712-11.976 16.458
                      16.458 0 0 0-4.712-11.976A15.723 15.723 0 0 0 13.381.702H-.151zM7.582
