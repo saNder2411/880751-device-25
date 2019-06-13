@@ -13,7 +13,7 @@ buttonService1.addEventListener("click", function(evt) {
     serviceSlide2.classList.remove("service-show");
     serviceSlide3.classList.remove("service-show");
 
-    buttonService1.classList.add("service-btn-js-1");
+    buttonService1.classList.add("service-btn-1");
     buttonService3.classList.remove("service-btn-js-3");
     buttonService2.classList.remove("service-btn-js-2");
 })
@@ -26,7 +26,7 @@ buttonService2.addEventListener("focus", function(evt) {
     serviceSlide3.classList.remove("service-show");
 
     buttonService2.classList.add("service-btn-js-2");
-    buttonService1.classList.remove("service-btn-js-1");
+    buttonService1.classList.remove("service-btn-1");
     buttonService3.classList.remove("service-btn-js-3");
 })
 
@@ -38,6 +38,6 @@ buttonService3.addEventListener("focus", function(evt) {
     serviceSlide2.classList.remove("service-show");
 
     buttonService3.classList.add("service-btn-js-3");
-    buttonService1.classList.remove("service-btn-js-1");
+    buttonService1.classList.remove("service-btn-1");
     buttonService2.classList.remove("service-btn-js-2");
 })
