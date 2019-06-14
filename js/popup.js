@@ -19,7 +19,7 @@ try {
     storageEmail = localStorage.getItem("emailUser");
 } catch (err) {
     isStorageSupport = false;
-};
+}
 
 buttonModal.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -30,7 +30,7 @@ buttonModal.addEventListener("click", function(evt) {
         textFeild.focus();
     } else {
         login.focus();
-    };
+    }
 });
 
 linkMap.addEventListener("click", function(evt) {
