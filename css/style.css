@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'gilroylight';
+    font-family: 'gilroy';
     src: url("../fonts/gilroylight-webfont.woff2") format('woff2'),
          url("../fonts/gilroylight-webfont.woff") format('woff');
-    font-weight: normal;
+    font-weight: lighter;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: "gilroyextrabold";
+    font-family: "gilroy";
     src: url("../fonts/gilroyextrabold-webfont.woff2") format('woff2'),
          url("../fonts/gilroyextrabold-webfont.woff") format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -26,7 +26,7 @@ body {
 body {
     margin-top: 40px;
 
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 30px;
     font-weight: 300;
@@ -90,6 +90,7 @@ body {
     background-color: rgba(240, 197, 46, 0.5);
     color: #000000;
 }
+
 .header-wrapper {
     position: relative;
 
@@ -139,7 +140,7 @@ body {
     position: relative;
     display: block;
 
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.27px;
@@ -148,9 +149,9 @@ body {
 }
 
 .user-menu .search {
-    width: 110px;
+    width: 315px;
     margin-left: 37px;
-    margin-right: 419px;
+    margin-right: 214px;
 }
 
 .user-menu li:not(:first-child) {
@@ -176,7 +177,7 @@ body {
 }
 
 .search-form input[type="search"] {
-    width: 115px;
+    width: 315px;
     min-height: 30px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -199,6 +200,7 @@ body {
 
 .search-form label{
     position: relative;
+    display: block;
 }
 
 .search-form label::before {
@@ -208,7 +210,7 @@ body {
     display: block;
     width: 16px;
     height: 16px;
-    top: 4px;
+    top: 9px;
     left: -34px;
 
     background-image: url(../img/search.svg);
@@ -223,7 +225,7 @@ body {
 .search-form .search-btn {
     position: absolute;
     top: -8px;
-    right: -292px;
+    right: -87px;
     width: 85px;
     height: 49px;
     border-radius: 0;
@@ -251,7 +253,8 @@ body {
     background-color: #000000;
 }
 
-input[id="search-in-site"]:focus ~ .search-btn {
+input[id="search-in-site"]:focus ~ .search-btn,
+.search-btn:focus {
     opacity: 1;
 }
 
@@ -304,10 +307,10 @@ input[id="search-in-site"]:focus ~ .search-btn {
         flex-wrap: wrap;
     margin-bottom: 15px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    font-weight:normal;
+    font-weight:bold;
     text-transform: uppercase;
     letter-spacing: 3.6px;
     text-align: left;
@@ -346,13 +349,6 @@ input[id="search-in-site"]:focus ~ .search-btn {
     right: 4px;
 
     background-color: #000000;
-    /* width: 30px;
-    height: 60px;
-    background-image: url(../img/plus.svg);
-    background-repeat: no-repeat;
-    background-position: 12px top;
-    top: 4px;
-    right: 2px; */
     opacity: 0.3;
 }
 
@@ -419,7 +415,7 @@ input[id="search-in-site"]:focus ~ .search-btn {
         flex-wrap: nowrap;
     margin-right:57px;
 
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 15px;
     line-height: 30px;
     text-transform: none;
@@ -557,7 +553,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-
 }
 
 .inner-title-slider b,
@@ -570,17 +565,19 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .slider-item  b {
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 56px;
     letter-spacing: 0.5px;
     color: #000000;
     text-align: left;
+    font-weight: bold;
 }
 
 .parameter-value td {
-    font-family: "gilroylight", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 36px;
+    font-weight: lighter;
     line-height: 48px;
     letter-spacing: 0.4px;
     text-align: left;
@@ -588,8 +585,9 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .parameter-value + tr {
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 13px;
+    font-weight: 300;
     line-height: 20px;
     letter-spacing: 0.13px;
     color: #464646;
@@ -622,7 +620,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 
 .slider-item .parameter {
     margin-top: 130px;
-    margin-bottom: 110px;
+    margin-bottom: 81px;
 }
 
 .option-pv-1 td:first-child {
@@ -657,10 +655,10 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     height: 131px;
     z-index: 5;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 179px;
     line-height: 179px;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 1.79px;
     color: rgba(255, 255, 255, 1);
     text-align: left;
@@ -789,11 +787,12 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 .catalog-menu-list span {
     text-decoration: none;
     color: #000000;
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.18px;
     text-align: left;
+    font-weight: bold;
 
     position: absolute;
     top: 193px;
@@ -922,12 +921,10 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
         -ms-flex-direction: column;
             flex-direction: column;
     -ms-flex-preferred-size: 284px;
-        flex-basis: 284px;
+        flex-basis: 277px;
 
     margin-bottom: 69px;
     min-height: 319px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     border-right: 7px solid #000000;
 }
 
@@ -976,7 +973,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 
 .services-slider-controls .button {
     width: 160px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
     cursor: pointer;
     background-color: transparent;
 }
@@ -990,19 +987,23 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-top: 88px;
 }
 
+.services-slider-controls .button:nth-child(2) {
+    margin-bottom: 39px;
+}
+
 .services-slider-controls .button:last-child {
-    margin-bottom: 78px;
+    margin-bottom: 73px;
 }
 
 .services-slider-item h3 {
     margin: 0;
     margin-bottom: 31px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.47px;
-    font-weight: normal;
+    font-weight: bold;
     color: #000000;
     text-align: left;
 }
@@ -1011,10 +1012,12 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin: 0;
 }
 
-.services-slider-item .services-image {
+.services-slider-item::before {
+    content: "";
     position: absolute;
     top: 12px;
     right: 43px;
+    display: block;
     width: 136px;
     height: 164px;
     background-image: url(../img/delivery.svg) ;
@@ -1023,7 +1026,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     background-size: contain;
 }
 
-.services-slider-item:nth-of-type(2) .services-image {
+.services-slider-item:nth-of-type(2)::before {
     top: -12px;
     right: 64px;
     width: 171px;
@@ -1031,7 +1034,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     background-image: url(../img/warranty.svg);
 }
 
-.services-slider-item:last-of-type  .services-image {
+.services-slider-item:last-of-type::before {
     top: -12px;
     right: 38px;
     width: 156px;
@@ -1084,10 +1087,9 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     position: relative;
     border: none;
 
-
-    font-family: "gilroyextrabold", "Arial", "sans-serif";
+    font-family: "gilroy", "Arial", "sans-serif";
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 3.6px;
@@ -1125,6 +1127,10 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 
 .button:active {
     color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-contols:active {
+    color: rgba(247, 225, 132, 1);
 }
 
 /* О нас и Контакты ===================================================== */
@@ -1206,9 +1212,9 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-bottom: 43px;
     margin-left: -3px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 47px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 48px;
     letter-spacing: 0.47px;
     color: #000000;
@@ -1220,9 +1226,9 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-top: 35px;
     margin-bottom: 36px;
 
-    font-family: "gilroyextrabold", "Arial", "sans-serif";
+    font-family: "gilroy", "Arial", "sans-serif";
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 40px;
     color: #000000;
 }
@@ -1298,6 +1304,13 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
             align-items: center;
     -ms-flex-line-pack: justify;
         align-content: space-between;
+
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    letter-spacing: 0.15px;
+    text-align: left;
 }
 
 
@@ -1408,7 +1421,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     opacity: 0.3;
 }
 
-.adress {
+.address {
     padding: 0;
     -ms-flex-preferred-size: 350px;
         flex-basis: 350px;
@@ -1434,12 +1447,12 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
         -ms-flex-pack: justify;
             justify-content: space-between;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase;
     letter-spacing: 3.6px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .phone {
@@ -1570,6 +1583,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     width: 360px;
     padding: 0;
 }
+
 .user-name-field {
     margin-left: 100px;
     margin-top: 90px;
@@ -1611,9 +1625,9 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .feedback-form label {
-    font-family: "gilroyextrabold", "Arial", "sans-serif";
+    font-family: "gilroy", "Arial", "sans-serif";
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
     color: #000000;
     margin-bottom: 4px;
 }
@@ -1640,7 +1654,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     height: 55px;
     background-color: #f0c52e;
     border-radius: 50%;
-    /* background-image: url(../img/modal-close.svg); */
     opacity: 0.5;
     z-index: 3;
 }
@@ -1676,7 +1689,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 .feedback-form input:focus,
 .feedback-form textarea:focus {
     background-color: rgba(255, 255, 255, 1);
-    border: 2px solid rgba(240, 197, 46, 0.5);
+    outline: 2px solid rgba(240, 197, 46, 0.5);
     color: #464646;
 }
 
@@ -1715,17 +1728,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
          5px 10px 20px 0px rgba(0, 0, 0, 0.1)
 }
 
-/* .modal-map .modal-close {
-    position: absolute;
-    top: 22px;
-    right: 22px;
-    background: none;
-    border: none;
-    width: 55px;
-    height: 55px;
-    background-image: url(../img/modal-close.svg);
-    filter: opacity(0.5);
-} */
 .modal-map iframe {
     position: absolute;
     z-index: 2;
@@ -1847,12 +1849,12 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-left: 59px;
     margin-top: 36px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 47px;
     line-height: 48px;
     letter-spacing: 0.56px;
     text-align: left;
-    font-weight: normal;
+    font-weight: bold;
     color: #000000;
 
 }
@@ -1882,7 +1884,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     margin-top: 24px;
 
 
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
@@ -1977,9 +1979,9 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     padding-top: 22px;
     background-color: #d9d9d9;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 24px;
     letter-spacing: 3.65px;
     color: #000000;
@@ -2018,11 +2020,11 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     position: absolute;
     top: 10px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.10px;
-    font-weight: normal;
+    font-weight: bold;
     text-align: left;
     color: #000000;
 }
@@ -2032,7 +2034,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     border-top: 2px solid #000000;
 }
 
-.cost::before {
+.cost output:first-of-type::before {
     content: "";
     position: absolute;
     display: block;
@@ -2044,14 +2046,13 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
 
-    top: 59px;
+    top: -21px;
     left: -5px;
     z-index: 1;
     cursor: pointer;
-    /* background-image: url(../img/filter-button.svg); */
 }
 
-.cost::after {
+.cost output:last-of-type::after {
     content: "";
     position: absolute;
     display: block;
@@ -2063,11 +2064,18 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
             box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
 
-    top: 59px;
-    left: 108px;
+    top: -21px;
+    left: 18px;
     z-index: 1;
     cursor: pointer;
-    /* background-image: url(../img/filter-button.svg); */
+}
+
+input[name="costcount-1"]:focus ~ output::before {
+    outline: 1px dotted #000000;
+}
+
+input[name="costcount-2"]:focus ~ output::after {
+    outline: 1px dotted #000000;
 }
 
 .cost output {
@@ -2075,9 +2083,10 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
     top: 80px;
 
     color: rgba(0, 0, 0, 0.2);
-    font-family: "gilroylight", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 14px;
     line-height: 24px;
+    font-weight: lighter;
 }
 
 .cost output:last-of-type {
@@ -2115,7 +2124,7 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 }
 
 .color-product label {
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.05px;
@@ -2139,10 +2148,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 
     border: 2.5px solid #000000;
     border-radius: 15%;
-
-    /* background-image: url(../img/checkbox-off.svg);
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
  .color-product label::after {
@@ -2156,7 +2161,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
 
     border-left: 4.5px solid #000000;
     border-bottom: 4.5px solid #000000;
-    border-right: 0px solid black ;
     -webkit-box-shadow: 0 2px 0 0 #ebebeb,
           inset 0 -2px 0 0 #ebebeb;
             box-shadow: 0 2px 0 0 #ebebeb,
@@ -2169,10 +2173,6 @@ input[id="btn-3"]:checked ~ .slider-inner .slider-slides {
             transform: rotate(-45deg);
 
     z-index: 10;
-
-    /* background-image: url(../img/checkbox-on.svg);
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
  .color-product label::after {
@@ -2195,6 +2195,10 @@ input[type="checkbox"]:disabled ~ label {
     opacity: 0.25;
 }
 
+input[type="checkbox"]:focus ~ label::before {
+    outline: 1px dotted #000000;
+}
+
 input[name^="bla"]:checked ~ label[for^="bla"]::after,
 input[name^="whi"]:checked ~ label[for^="whi"]::after,
 input[name^="blu"]:checked ~ label[for^="blu"]::after,
@@ -2202,16 +2206,6 @@ input[name^="red"]:checked ~ label[for^="red"]::after,
 input[name^="pin"]:checked ~ label[for^="pin"]::after {
     display: block;
 }
-
-/* input[name^="bla"]:checked ~ label[for^="bla"]::before,
-input[name^="whi"]:checked ~ label[for^="whi"]::before,
-input[name^="blu"]:checked ~ label[for^="blu"]::before,
-input[name^="red"]:checked ~ label[for^="red"]::before,
-input[name^="pin"]:checked ~ label[for^="pin"]::before {
-    display: none;
-} */
-
-
 
 .color-product li {
     margin-bottom: 10px;
@@ -2221,13 +2215,11 @@ input[name^="pin"]:checked ~ label[for^="pin"]::before {
     margin-bottom: 37px;
 }
 
-
-
 .radio-bluetooth label {
     margin-left: 39px;
     position: relative;
 
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.05px;
@@ -2252,11 +2244,6 @@ input[name^="pin"]:checked ~ label[for^="pin"]::before {
     top: -2px;
     border: 4px solid #000000;
     border-radius: 50%;
-
-    /* background-image: url(../img/radio-off.svg);
-    background-position: center;
-    background-repeat: no-repeat; */
-
 }
 
 .radio-bluetooth label::after {
@@ -2270,11 +2257,6 @@ input[name^="pin"]:checked ~ label[for^="pin"]::before {
 
     border-radius: 50%;
     background-color: #000000;
-
-    /* background-image: url(../img/radio-on.svg);
-    background-position: center;
-    background-repeat: no-repeat; */
-
 }
 
 .radio-bluetooth label::after {
@@ -2297,22 +2279,21 @@ input[type="radio"]:disabled ~ label {
     opacity: 0.25;
 }
 
-.radio-bluetooth input[id="yes"]:checked ~ label[for="yes"]::after,
-.radio-bluetooth input[id="no"]:checked ~ label[for="no"]::after
+input[type="radio"]:focus ~ label::before {
+    outline: 1px dotted #000000;
+}
+
+input[id="yes"]:checked ~ label[for="yes"]::after,
+input[id="no"]:checked ~ label[for="no"]::after
  {
     display: block;
 }
-
-/* .radio-bluetooth input[id="yes"]:checked ~ label[for="yes"]::before,
-.radio-bluetooth input[id="no"]:checked ~ label[for="no"]::before
- {
-    display: none;
-} */
 
 .filter-form .filter-btn {
    margin-left: 92px;
    margin-top: 33px;
    cursor: pointer;
+   background-color: transparent;
 }
 
 .filter-form .filter-btn::after{
@@ -2361,9 +2342,9 @@ input[type="radio"]:disabled ~ label {
     margin-left: 73px;
     margin-bottom: 1px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 50px;
     letter-spacing: 3.35px;
     color: #000000;
@@ -2430,11 +2411,8 @@ input[type="radio"]:disabled ~ label {
     border-top: 0;
     border-bottom: 10px solid #000000;
 
-    /* background-image: url(../img/icon-up-dir.svg);
-    background-repeat: no-repeat;
-    background-position: center; */
-    -webkit-filter: opacity(0.2);
-            filter: opacity(0.2);
+    opacity: 0.2;
+
 }
 
 .arrow-down {
@@ -2444,10 +2422,6 @@ input[type="radio"]:disabled ~ label {
     border-right: 6px solid transparent;
     border-bottom: 0;
     border-top: 10px solid #000000;
-
-    /* background-image: url(../img/icon-down-dir.svg);
-    background-repeat: no-repeat;
-    background-position: center; */
 }
 
 .catalog-header a[class^="arrow"]:hover,
@@ -2501,9 +2475,9 @@ input[type="radio"]:disabled ~ label {
     margin-top: 23px;
     width: 259px;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 18px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 24px;
     letter-spacing: 0.18px;
     color: #000000;
@@ -2528,9 +2502,9 @@ input[type="radio"]:disabled ~ label {
     right: 0;
     top: 413px;
 
-    font-family: "gilroylight", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: lighter;
     line-height: 24px;
     letter-spacing: 0.14px;
     color: #464646;
@@ -2554,9 +2528,9 @@ input[type="radio"]:disabled ~ label {
     border-radius: 50%;
     z-index: 2;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 14px;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 24px;
     letter-spacing: 0.7px;
     font-stretch: normal;
@@ -2579,7 +2553,7 @@ input[type="radio"]:disabled ~ label {
     background: none;
     z-index: 100;
 
-    display: none;
+    opacity: 0;
 }
 
 .catalog-item .button::after {
@@ -2595,7 +2569,7 @@ input[type="radio"]:disabled ~ label {
     border:none;
     background: none;
 
-    font-family: "Open Sans Light", "Arial", sans-serif;
+    font-family: "Open Sans", "Arial", sans-serif;
     font-size: 13px;
     line-height: 20px;
     letter-spacing: 0.1px;
@@ -2605,7 +2579,7 @@ input[type="radio"]:disabled ~ label {
     z-index: 100;
     cursor: pointer;
 
-    display: none;
+    opacity: 0;
 }
 
 .catalog-item .btn-compare:hover,
@@ -2618,12 +2592,18 @@ input[type="radio"]:disabled ~ label {
 }
 
 .catalog-item:hover .button,
-.catalog-item:hover .btn-compare {
-    display: block;
+.catalog-item:hover .btn-compare,
+.button:focus,
+.btn-compare:focus  {
+    opacity: 1;
 }
 
+
+
 .btn-basket:hover ~ .catalog-link-img,
-.btn-compare:hover ~ .catalog-link-img {
+.btn-compare:hover ~ .catalog-link-img,
+.btn-basket:focus ~ .catalog-link-img,
+.btn-compare:focus ~ .catalog-link-img {
     opacity: 0.7;
 }
 
@@ -2647,12 +2627,12 @@ input[type="radio"]:disabled ~ label {
 
     background-color: #ebebeb;
 
-    font-family: "gilroyextrabold", "Arial", sans-serif;
+    font-family: "gilroy", "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 3.5px;
     color: #000000;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
